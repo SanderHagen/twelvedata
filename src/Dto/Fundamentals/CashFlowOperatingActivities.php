@@ -7,15 +7,15 @@ namespace MarekSkopal\TwelveData\Dto\Fundamentals;
 readonly class CashFlowOperatingActivities
 {
     public function __construct(
-        public int $netIncome,
-        public int $depreciation,
+        public ?int $netIncome,
+        public ?int $depreciation,
         public ?int $deferredTaxes,
-        public int $stockBasedCompensation,
-        public int $otherNonCashItems,
-        public int $accountsReceivable,
-        public int $accountsPayable,
-        public int $otherAssetsLiabilities,
-        public int $operatingCashFlow,
+        public ?int $stockBasedCompensation,
+        public ?int $otherNonCashItems,
+        public ?int $accountsReceivable,
+        public ?int $accountsPayable,
+        public ?int $otherAssetsLiabilities,
+        public ?int $operatingCashFlow,
     ) {
     }
 
