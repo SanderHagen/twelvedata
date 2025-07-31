@@ -21,15 +21,15 @@ readonly class CashFlowOperatingActivities
 
     /**
      * @param array{
-     *     net_income: int,
-     *     depreciation: int,
+     *     net_income: int|null,
+     *     depreciation: int|null,
      *     deferred_taxes: int|null,
-     *     stock_based_compensation: int,
-     *     other_non_cash_items: int,
-     *     accounts_receivable: int,
-     *     accounts_payable: int,
-     *     other_assets_liabilities: int,
-     *     operating_cash_flow: int,
+     *     stock_based_compensation: int|null,
+     *     other_non_cash_items: int|null,
+     *     accounts_receivable: int|null,
+     *     accounts_payable: int|null,
+     *     other_assets_liabilities: int|null,
+     *     operating_cash_flow: int|null,
      * } $data
      */
     public static function fromArray(array $data): self
