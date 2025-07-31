@@ -8,26 +8,26 @@ readonly class CashFlowFinancingActivities
 {
     public function __construct(
         public ?int $longTermDebtIssuance,
-        public int $longTermDebtPayments,
-        public int $shortTermDebtIssuance,
+        public ?int $longTermDebtPayments,
+        public ?int $shortTermDebtIssuance,
         public ?int $commonStockIssuance,
-        public int $commonStockRepurchase,
-        public int $commonDividends,
-        public int $otherFinancingCharges,
-        public int $financingCashFlow,
+        public ?int $commonStockRepurchase,
+        public ?int $commonDividends,
+        public ?int $otherFinancingCharges,
+        public ?int $financingCashFlow,
     ) {
     }
 
     /**
      * @param array{
      *     long_term_debt_issuance: int|null,
-     *     long_term_debt_payments: int,
-     *     short_term_debt_issuance: int,
+     *     long_term_debt_payments: int|null,
+     *     short_term_debt_issuance: int|null,
      *     common_stock_issuance: int|null,
-     *     common_stock_repurchase: int,
-     *     common_dividends: int,
-     *     other_financing_charges: int,
-     *     financing_cash_flow: int,
+     *     common_stock_repurchase: int|null,
+     *     common_dividends: int|null,
+     *     other_financing_charges: int|null,
+     *     financing_cash_flow: int|null,
      * } $data
      */
     public static function fromArray(array $data): self
