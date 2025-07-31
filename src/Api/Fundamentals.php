@@ -210,6 +210,7 @@ class Fundamentals extends TwelveDataApi
         ?PeriodEnum $period = null,
         ?DateTimeImmutable $startDate = null,
         ?DateTimeImmutable $endDate = null,
+        ?string $outputSize = null,
     ): BalanceSheet {
         $response = $this->client->get(
             path: '/balance_sheet',
@@ -221,6 +222,7 @@ class Fundamentals extends TwelveDataApi
                 'period' => $period?->value,
                 'start_date' => $startDate?->format('Y-m-d'),
                 'end_date' => $endDate?->format('Y-m-d'),
+                'outputSize' => $outputSize,
             ],
         );
 
