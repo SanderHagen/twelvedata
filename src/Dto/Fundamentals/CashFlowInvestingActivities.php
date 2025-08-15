@@ -13,7 +13,7 @@ readonly class CashFlowInvestingActivities
         public ?int $purchaseOfInvestments,
         public ?int $saleOfInvestments,
         public ?int $otherInvestingActivity,
-        public int $investingCashFlow,
+        public ?int $investingCashFlow,
     ) {
     }
 
