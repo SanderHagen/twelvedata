@@ -7,25 +7,25 @@ namespace MarekSkopal\TwelveData\Dto\Fundamentals;
 readonly class CashFlowInvestingActivities
 {
     public function __construct(
-        public int $capitalExpenditures,
+        public ?int $capitalExpenditures,
         public ?int $netIntangibles,
         public ?int $netAcquisitions,
-        public int $purchaseOfInvestments,
-        public int $saleOfInvestments,
-        public int $otherInvestingActivity,
+        public ?int $purchaseOfInvestments,
+        public ?int $saleOfInvestments,
+        public ?int $otherInvestingActivity,
         public int $investingCashFlow,
     ) {
     }
 
     /**
      * @param array{
-     *     capital_expenditures: int,
+     *     capital_expenditures: int|null,
      *     net_intangibles: int|null,
      *     net_acquisitions: int|null,
-     *     purchase_of_investments: int,
-     *     sale_of_investments: int,
-     *     other_investing_activity: int,
-     *     investing_cash_flow: int,
+     *     purchase_of_investments: int|null,
+     *     sale_of_investments: int|null,
+     *     other_investing_activity: int|null,
+     *     investing_cash_flow: int|null,
      * } $data
      */
     public static function fromArray(array $data): self
